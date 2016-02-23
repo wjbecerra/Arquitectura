@@ -86,5 +86,25 @@ sub %L1,%L2,%L5;
 add %L4,%L5,%L3;
 add %g0,0,%o0
 
+6. Inicializar las siguientes variables negativas usando OR.
+
+a.) 
+n=-12
+R./
+or %g0,-12,%L0
+
+
+b.)
+a=-11
+R./
+or %g0,-11,%L1
+
+
+c.)
+b=-14
+R./
+or %g0,-14,%L2
+
+
 
 	
