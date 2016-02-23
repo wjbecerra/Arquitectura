@@ -1,0 +1,32 @@
+Nombre: Wilmar Javier Becerra Aragón
+Código: 94539351
+
+
+2. Escriba los 4 principios de diseño de hardware aprendidos en clase.
+
+R/.
+1. La simplicidad favorece la regularidad
+2. Entre mas pequeño, más rápido.
+3. Hacer el caso común más rápido.
+4. Buenos diseños requieren grandes compromisos.
+
+
+
+3. Convertir a instrucciones de bajo nivel.
+
+int x= 0; 
+int y = 8; 
+int z = 1; 
+
+y=x+3;
+z=z+3;
+x=(x-z)+(3+y);
+
+R./
+or %g0,0,&L0;
+or %g0,8,&L1;
+or %g0,1,&L2;
+
+add %L0,3,%L1;
+add %L2,3,%L2;
+add
