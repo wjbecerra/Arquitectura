@@ -1,0 +1,61 @@
+Wilmar Javier Becerra Aragón
+Cod: 94539351
+
+int main () 
+{
+int p=3,	h[300],		b[40];
+h[10]= 3;
+b[4] = -1;
+h[20] = b[4] + h[10] + p;
+return 0;
+}
+
+R/.
+Asignación de registros a variables:
+p=%l0
+h=%l1
+b=%l2
+
+Inicialización de variables y almacenamiento en registros:
+1. OR %g0,3,%l0;
+2. OR %go,0,%l1;
+3. OR g%0,1200,%l2;
+4. OR %g0,3,%l3;
+5. ST %l1,%l3,40;
+6. OR %g0,-1,%l4;
+7. ST %l2,%l4,16;
+8. ADD %l3,%l4,%l3;
+9. ADD %l3,%l0,%l3;
+10.ST  %l1,%l3,80;
+
+Expresiones en lenguajes de maquina:
+
+1.						    VALOR HEXADECIMAL		
+10 10000 000010 00000 1 0000000000011   ---->            A0102003
+
+2. 		                                    VALOR HEXADECIMAL		
+10 10001 000010 00000  1 0000000000000  ---->            A2102000
+
+3. 		                                    VALOR HEXADECIMAL		
+10 10010 000010 00000  1 0010010110000  ---->            A41024B0
+
+4. 		                                    VALOR HEXADECIMAL		
+10 10011 000010 00000  1 0000000000011  ---->            A6204003
+
+5. 		                                    VALOR HEXADECIMAL		
+11 10011 000100 10010  1 0000000101000  ---->            E624A028
+
+6. 		                                    VALOR HEXADECIMAL		
+10 10100 000010 00000  1 1111111111110  ---->            A8103FFE
+
+7. 		                                    VALOR HEXADECIMAL		
+11 10100 000100 10010  1 0000000010000  ---->            E824A010
+
+8. 		                                    VALOR HEXADECIMAL		
+10 10011 000000 10011  0 0000000010100  ---->            A604C014
+
+9. 		                                    VALOR HEXADECIMAL		
+10 10011 000000 10011  0 0000000010000  ---->            A604C010
+
+10. 		                                    VALOR HEXADECIMAL		
+11 10011 000100 10001  1 0000001010000  ---->            E6246050
