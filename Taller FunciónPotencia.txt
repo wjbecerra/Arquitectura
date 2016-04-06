@@ -1,0 +1,89 @@
+TALLER RECUPERACION PARCIAL
+
+Nombre: Wilmar Javier Becerra Aragón
+Código: 94539351
+
+1. escriba el programa potencia en lenguaje de alto nivel. 
+int mult(int a, int b)
+{
+    int resultado=0;
+    for (int i=0; i<b; i++)
+    {
+        resultado= resultado + a;
+    }
+    
+    return resultado;
+}
+
+int expo (int base, int exp)
+{
+    int resultado=1;
+    for (int i=0; i<exp;i++)
+    {
+        resultado= mult(resultado,base);
+    }
+    return resultado;
+}
+
+int main()
+{
+   int x=3, y=2;
+int z=(expo(x,y))
+return z;
+}
+
+
+2. escriba el programa potencia en lenguaje de bajo nivel (Ensamblador)
+
+a=%i0
+b=%i1
+base=%i2
+exp=%i3
+
+resultado=%L0
+i=%L1
+result=%L2
+j=%L3
+x=%L5
+y=%L6
+z=%O3
+
+Mult
+1.)	0X0000	|MOV 0, %L0;
+For
+2.)	0X0004	|MOV 0, %L1;
+3.)	0X0008	|CMP %L1, %i1;
+4.)	0X000C	|BGE  a, Salto1;
+5.)	0X0010	|ADD %L0, %i0, %L0;
+6.)	0X0014	|BA     ,       FOR;
+7.)	0X0018	|ADD %L1, 1, %L1;
+    Salto1
+8.)	0X001C	|JMPL %O7, 8, %G0;
+9.)	0X0020	|MOV  %L0, %O0;
+10.)	0X0024	|MOV    1, %L2;
+11.)	0X0028	|
+12.)	0X002C	|
+13.)	0X0030	|
+14.)	0X0034	|
+15.)	0X0038	|
+16.)	0X003C	|
+17.)	0X0040	|
+18.)	0X0044	|
+19.)	0X0048	|
+20.)	0X004C	|
+21.)	0X0050	|
+22.)	0X0054	|
+23.)	0X0058	|
+24.)	0X005C	|
+25.)	0X0060	|
+26.)	0X0064	|
+27.)	0X0068	|
+
+
+
+
+
+
+
+
+
